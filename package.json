@@ -1,0 +1,16 @@
+{
+  "name": "win-volume",
+  "version": "1.0.0",
+  "description": "volume control for windows",
+  "main": "./build/Release/win-volume.node",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node-gyp rebuild"
+  },
+  "keywords": [
+    "volume"
+  ],
+  "author": "goldworm",
+  "license": "MIT",
+  "gypfile": true
+}
