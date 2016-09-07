@@ -8,7 +8,7 @@ exec('npm list electron-prebuilt --dev', (err, stdout) => {
     var version;
 
     if (err) {
-        version = '1.3.2';
+        version = '1.3.4';
     } else {
         version = stdout.split('electron-prebuilt@')[1].replace(/\s/g, '');
     }
