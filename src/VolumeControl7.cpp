@@ -39,7 +39,7 @@ int VolumeControl7::Init()
     CHECK_STATE(gw::eLCS_NONE)
 
     HRESULT hr = CoInitializeEx(NULL, COINIT_MULTITHREADED);
-    if (SUCCEEDED(hr))
+    if (SUCCEEDED(hr) || hr == RPC_E_CHANGED_MODE)
     {
         m_state.SetState(gw::eLCS_INIT);
         return 0;
