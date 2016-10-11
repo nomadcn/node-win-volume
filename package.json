@@ -1,6 +1,6 @@
 {
   "name": "win-volume",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "volume control for windows",
   "main": "./index.js",
   "scripts": {
@@ -9,7 +9,11 @@
     "install": "node-pre-gyp install --fallback-to-build"
   },
   "keywords": [
-    "volume", "win", "control", "speaker", "mic"
+    "volume",
+    "win",
+    "control",
+    "speaker",
+    "mic"
   ],
   "author": "callsync@nomadconnection.com",
   "license": "MIT",
