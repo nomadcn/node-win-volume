@@ -1,7 +1,7 @@
 {
   "targets": [
     {
-      "target_name': '<(module_name)",
+      "target_name": "<(module_name)",
       "sources": [
         "./src/volume.cc",
         "./src/VolumeControl7.cpp",
@@ -11,42 +11,42 @@
         ],
       "include_dirs": [ "./src", "./src/ext/gwutils" ],
       "libraries": [ "winmm.lib" ],
-      'configurations' : {
-        'Debug' : {
-          'msvs_settings': {
-            'VCCLCompilerTool': {
-              'RuntimeLibrary': '3' # /MDd
+      "configurations" : {
+        "Debug" : {
+          "msvs_settings": {
+            "VCCLCompilerTool": {
+              "RuntimeLibrary": "3" # /MDd
             },
-            'VCLinkerTool': {
-              'AdditionalOptions': ['/ignore:4099'],
-              'IgnoreDefaultLibraryNames': ['libcmtd.lib']
+            "VCLinkerTool": {
+              "AdditionalOptions": ["/ignore:4099"],
+              "IgnoreDefaultLibraryNames": ["libcmtd.lib"]
             }
           }
         },
-        'Release' : {
-          'msvs_settings': {
-            'VCCLCompilerTool': {
-              'RuntimeTypeInfo': 'true', # To disable '/GR-'
-              'RuntimeLibrary': '2' # /MDd
+        "Release" : {
+          "msvs_settings": {
+            "VCCLCompilerTool": {
+              "RuntimeTypeInfo": "true", # To disable "/GR-"
+              "RuntimeLibrary": "2" # /MDd
             },
-            'VCLinkerTool': {
-              'AdditionalOptions': ['/ignore:4099'],
-              'IgnoreDefaultLibraryNames': ['libcmt.lib']
+            "VCLinkerTool": {
+              "AdditionalOptions": ["/ignore:4099"],
+              "IgnoreDefaultLibraryNames": ["libcmt.lib"]
             }
           }
         }
       }
     },
 	{
-		"target_name": "action_after_build",
-		"type": "none",
-		"dependencies": [ "<(module_name)" ],
-		"copies": [
-			{
-				"files": [ "<(PRODUCT_DIR)/<(module_name).node" ],
-				"destination": "<(module_path)"
-			}
-		]
-	}
+        "target_name": "action_after_build",
+        "type": "none",
+        "dependencies": [ "<(module_name)" ],
+        "copies": [
+            {
+                "files": [ "<(PRODUCT_DIR)/<(module_name).node" ],
+                "destination": "<(module_path)"
+            }
+        ]
+    }
   ]
 }

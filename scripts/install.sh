@@ -6,7 +6,6 @@
 
 ARCH=x64
 if [ $OSTYPE == "cygwin" ]; then
-    echo "ia32"
     ARCH=ia32
     # Install all dependencies, and store cache to ~/.electron-gyp.
     export npm_config_msvs_version=2013
@@ -24,6 +23,7 @@ export npm_config_runtime=electron
 export npm_config_build_from_source=true
 
 rm -rf ./build
+echo $npm_config_target $npm_config_arch
 
 node-pre-gyp configure --target_arch=$ARCH && \
 node-pre-gyp build --target_arch=$ARCH && \
